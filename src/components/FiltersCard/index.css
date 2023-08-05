@@ -1,0 +1,141 @@
+.filters-bg-container {
+  width: 100%;
+  max-width: 330px;
+  margin: 0px 0px 0px 0px;
+  padding: 0px 15px 30px 15px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.filters-input-container {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  max-width: 400px;
+  background-color: #f1f5f9;
+  border-radius: 8px;
+  border: none;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  margin: 0px 0px 35px 0px;
+}
+
+.filter-search-bar {
+  width: 80%;
+  font-family: 'Roboto';
+  font-size: 16px;
+  cursor: pointer;
+  outline: none;
+  color: #000000;
+  border: none;
+  padding: 12px 15px 12px 15px;
+  background: transparent;
+}
+
+.search-icon {
+  width: 20%;
+}
+
+.category-list-bg-container {
+  list-style-type: none;
+  padding: 0px 0px 0px 0px;
+  margin: 0px 0px 20px 0px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.category-list-heading {
+  font-size: 20px;
+  color: #000000;
+  font-weight: bold;
+  padding: 0px 0px 0px 0px;
+  margin: 0px 0px 20px 0px;
+}
+
+@media screen and (min-width: 768px) {
+  .category-list-heading {
+    font-size: 23px;
+  }
+}
+
+.category-button {
+  cursor: pointer;
+  outline: none;
+  border: none;
+  background: transparent;
+  padding: 0px 0px 0px 0px;
+  margin: 0px 0px 20px 0px;
+  text-align: left;
+  font-size: 16px;
+  font-weight: 500;
+}
+
+@media screen and (min-width: 768px) {
+  .category-button {
+    font-size: 18px;
+  }
+}
+
+.apply-category-style {
+  color: blue;
+  font-weight: bold;
+}
+
+.ratings-list-bg-container {
+  list-style-type: none;
+  padding: 0px 0px 0px 0px;
+  margin: 0px 0px 20px 0px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.rating-list-heading {
+  font-size: 20px;
+  color: #000000;
+  font-weight: bold;
+  padding: 0px 0px 0px 0px;
+  margin: 0px 0px 20px 0px;
+}
+
+@media screen and (min-width: 768px) {
+  .rating-list-heading {
+    font-size: 23px;
+  }
+}
+
+.rating-button {
+  border: none;
+  background: transparent;
+  padding: 0px 0px 0px 0px;
+  margin: 0px 0px 20px 0px;
+  cursor: pointer;
+  outline: none;
+  width: 100%;
+  max-width: 130px;
+}
+
+.rating-image {
+  width: 100%;
+}
+
+.clear-filters-button {
+  border: 2px solid blue;
+  color: blue;
+  background: transparent;
+  cursor: pointer;
+  outline: none;
+  font-weight: 600;
+  font-size: 18px;
+  padding: 8px 15px 8px 15px;
+  margin: 0px 0px 15px 0px;
+  border-radius: 7px;
+}
+
+.apply-rating-style {
+  border-bottom: 1px solid blue;
+  padding: 0px 0px 0px 0px;
+}

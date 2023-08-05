@@ -1,0 +1,109 @@
+.common-products-bg-container {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+@media screen and (min-width: 800px) {
+  .common-products-bg-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: flex-start;
+  }
+}
+
+.products-route-common-products-main-heading {
+  width: 95%;
+  text-align: left;
+  color: #000000;
+  font-size: 25px;
+  padding: 0px 0px 0px 0px;
+  margin: 0px 0px 30px 0px;
+  font-weight: bold;
+}
+
+@media screen and (min-width: 768px) {
+  .products-route-common-products-main-heading {
+    font-size: 35px;
+  }
+}
+
+.common-products-loader-bg-container {
+  height: 300px;
+  width: 100%;
+  max-width: 650px;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+
+.products-route-failure-view-bg-container {
+  width: 90%;
+  max-width: 650px;
+  height: 400px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 0px 0px 0px 0px;
+  padding: 0px 0px 0px 0px;
+}
+
+.products-route-failure-view-image {
+  width: 100%;
+  max-width: 250px;
+  margin: 20px 5px 30px 5px;
+}
+
+.products-route-failure-view-heading {
+  font-family: 'Roboto';
+  text-align: center;
+  color: #000000;
+  font-size: 18px;
+  padding: 0px 0px 0px 0px;
+  margin: 0px 0px 20px 0px;
+}
+
+@media screen and (min-width: 768px) {
+  .products-route-failure-view-heading {
+    font-size: 20px;
+  }
+}
+
+.products-route-failure-view-description {
+  font-family: 'Roboto';
+  font-size: 14px;
+  color: gray;
+  padding: 0px 0px 0px 0px;
+  margin: 0px 0px 20px 0px;
+  text-align: center;
+}
+
+@media screen and (min-width: 768px) {
+  .products-route-failure-view-description {
+    font-size: 16px;
+  }
+}
+
+.products-route-success-view-bg-container {
+  width: 100%;
+  max-width: 700px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  padding: 0px 20px 30px 20px;
+}
+
+.products-list-bg-container {
+  height: 100%;
+  width: 100%;
+  list-style-type: none;
+  padding: 0px 0px 0px 0px;
+  margin: 0px 0px 0px 0px;
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  flex-wrap: wrap;
+}
