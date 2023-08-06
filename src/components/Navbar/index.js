@@ -1,4 +1,4 @@
-import {withRouter, Link} from 'react-router-dom'
+import {withRouter, Link, useLocation} from 'react-router-dom'
 
 import Cookies from 'js-cookie'
 import {FiLogOut} from 'react-icons/fi'
@@ -13,6 +13,8 @@ const Navbar = props => {
     Cookies.remove('jwt_token')
     history.replace('/')
   }
+
+  const location = useLocation()
 
   return (
     <>
@@ -35,13 +37,31 @@ const Navbar = props => {
         </div>
         <div className="mobile-navbar-menu-card">
           <Link className="mobile-nav-link" to="/home">
-            <AiFillHome className="mobile-icon" />
+            <AiFillHome
+              className={`${
+                location.pathname === '/home'
+                  ? 'mobile-style-icon'
+                  : 'mobile-icon'
+              }`}
+            />
           </Link>
           <Link className="mobile-nav-link" to="/products">
-            <FaShoppingBag className="mobile-icon" />
+            <FaShoppingBag
+              className={`${
+                location.pathname === '/products'
+                  ? 'mobile-style-icon'
+                  : 'mobile-icon'
+              }`}
+            />
           </Link>
           <Link className="mobile-nav-link" to="/cart">
-            <FaShoppingCart className="mobile-icon" />
+            <FaShoppingCart
+              className={`${
+                location.pathname === '/cart'
+                  ? 'mobile-style-icon'
+                  : 'mobile-icon'
+              }`}
+            />
           </Link>
         </div>
       </nav>
@@ -54,13 +74,34 @@ const Navbar = props => {
           />
         </Link>
         <div className="desktop-menu-card">
-          <Link to="/home" className="desktop-nav-link">
+          <Link
+            to="/home"
+            className={`${
+              location.pathname === '/home'
+                ? 'desktop-style-nav-link'
+                : 'desktop-nav-link'
+            }`}
+          >
             Home
           </Link>
-          <Link to="/products" className="desktop-nav-link">
+          <Link
+            to="/products"
+            className={`${
+              location.pathname === '/products'
+                ? 'desktop-style-nav-link'
+                : 'desktop-nav-link'
+            }`}
+          >
             Products
           </Link>
-          <Link to="/cart" className="desktop-nav-link">
+          <Link
+            to="/cart"
+            className={`${
+              location.pathname === '/cart'
+                ? 'desktop-style-nav-link'
+                : 'desktop-nav-link'
+            }`}
+          >
             Cart
           </Link>
           <button

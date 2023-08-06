@@ -152,11 +152,26 @@ class CommonProductsSection extends Component {
           sortByOptions={sortByOptions}
           onChangeSortBy={this.onChangeSortBy}
         />
-        <ul className="products-list-bg-container">
-          {productsList.map(eachitem => (
-            <ProductCard key={eachitem.id} data={eachitem} />
-          ))}
-        </ul>
+        {productsList.length !== 0 ? (
+          <ul className="products-list-bg-container">
+            {productsList.map(eachitem => (
+              <ProductCard key={eachitem.id} data={eachitem} />
+            ))}
+          </ul>
+        ) : (
+          <div className="no-products-found-bg-container">
+            <img
+              src="https://assets.ccbp.in/frontend/react-js/nxt-trendz/nxt-trendz-no-products-view.png"
+              className="no-products-image"
+              alt="no products"
+            />
+            <h1 className="no-products-heading">No Products Found</h1>
+            <p className="no-products-description">
+              We could not find any products. Try other filters and search
+              values.
+            </p>
+          </div>
+        )}
       </div>
     )
   }

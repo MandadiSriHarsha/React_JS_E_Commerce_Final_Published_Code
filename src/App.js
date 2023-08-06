@@ -4,6 +4,7 @@ import LoginRoute from './components/LoginRoute'
 import HomeRoute from './components/HomeRoute'
 import ProductsRoute from './components/ProductsRoute'
 import ProtectedRoute from './components/ProtectedRoute'
+import ProductItemDetailsRoute from './components/ProductItemDetailsRoute'
 import NotFoundRoute from './components/NotFoundRoute'
 
 import './App.css'
@@ -14,6 +15,11 @@ const App = () => (
       <Route exact path="/" component={LoginRoute} />
       <ProtectedRoute exact path="/home" component={HomeRoute} />
       <ProtectedRoute exact path="/products" component={ProductsRoute} />
+      <ProtectedRoute
+        exact
+        path="/products/:id"
+        component={ProductItemDetailsRoute}
+      />
       <Route exact path="/not-found" component={NotFoundRoute} />
       <Redirect to="/not-found" />
     </Switch>

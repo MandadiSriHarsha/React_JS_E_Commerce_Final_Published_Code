@@ -84,7 +84,19 @@ const FiltersCard = props => {
           onKeyDown={onEnterSearchDown}
           placeholder="Search"
         />
-        <BsSearch className="search-icon" />
+        <button
+          type="button"
+          style={{
+            border: 'none',
+            background: 'transparent',
+            cursor: 'pointer',
+            outline: 'none',
+            width: '20%',
+          }}
+          onClick={fetchProductsList}
+        >
+          <BsSearch className="search-icon" />
+        </button>
       </div>
       <ul className="category-list-bg-container">
         <h1 className="category-list-heading">Category</h1>

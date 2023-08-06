@@ -1,0 +1,10 @@
+.loader-bg-container {
+  height: 85vh;
+  width: 95%;
+  max-width: 1000px;
+  margin: auto;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
