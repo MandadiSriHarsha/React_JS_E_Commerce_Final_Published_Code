@@ -28,7 +28,7 @@ class HomeRoute extends Component {
         <Navbar />
         {pageStatus === 'LOADING' ? (
           <div className="home-route-loader-bg-container">
-            <Loader type="TailSpin" color="#00BBFF" height={50} width={50} />
+            <Loader type="ThreeDots" color="#00BBFF" height={50} width={50} />
           </div>
         ) : (
           <div className="home-page-bg-container">

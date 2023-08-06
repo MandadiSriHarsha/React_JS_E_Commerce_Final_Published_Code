@@ -43,7 +43,7 @@ class PrimeDealsProductsSection extends Component {
 
   renderLoaderCard = () => (
     <div className="prime-deals-loader-bg-container">
-      <Loader type="TailSpin" color="#00BBFF" height={50} width={50} />
+      <Loader type="ThreeDots" color="#00BBFF" height={50} width={50} />
     </div>
   )
 

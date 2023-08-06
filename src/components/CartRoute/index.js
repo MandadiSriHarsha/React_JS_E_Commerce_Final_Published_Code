@@ -1,0 +1,105 @@
+import {Component} from 'react'
+
+import {Link} from 'react-router-dom'
+
+import Loader from 'react-loader-spinner'
+
+import Navbar from '../Navbar'
+
+import CartContext from '../../context/CartContext'
+
+import 'react-loader-spinner/dist/loader/css/react-spinner-loader.css'
+import './index.css'
+import CartItem from '../CartItem'
+
+class CartRoute extends Component {
+  state = {pageStatus: 'LOADING'}
+
+  renderEmptyCartView = () => (
+    <div className="empty-cart-view-container">
+      <img
+        src="https://assets.ccbp.in/frontend/react-js/nxt-trendz-empty-cart-img.png"
+        alt="empty cart"
+        className="empty-cart-view-image"
+      />
+      <p className="empty-cart-view-heading">Your Cart Is Empty</p>
+      <Link to="/products" className="empty-cart-view-button">
+        Products
+      </Link>
+    </div>
+  )
+
+  render() {
+    return (
+      <>
+        <Navbar />
+        <div className="cart-route-bg-container">
+          <CartContext.Consumer>
+            {values => {
+              const {
+                cartList,
+                removeItemFromCart,
+                increaseCartItemQuantity,
+                decreaseCartItemQuantity,
+                clearCart,
+              } = values
+              let totalCartPrice = 0
+              cartList.forEach(eachitem => {
+                totalCartPrice += eachitem.totalItemPrice
+              })
+              return (
+                <>
+                  {cartList.length === 0 ? (
+                    this.renderEmptyCartView()
+                  ) : (
+                    <div className="cart-list-view-bg-container">
+                      <h1 className="cart-list-view-heading">My Cart</h1>
+                      <button
+                        className="clear-cart-button"
+                        type="button"
+                        onClick={clearCart}
+                      >
+                        Remove All
+                      </button>
+                      <ul className="cart-list-bg-container">
+                        {cartList.map(eachitem => (
+                          <CartItem
+                            key={eachitem.id}
+                            data={eachitem}
+                            removeItemFromCart={removeItemFromCart}
+                            increaseCartItemQuantity={increaseCartItemQuantity}
+                            decreaseCartItemQuantity={decreaseCartItemQuantity}
+                            clearCart={clearCart}
+                          />
+                        ))}
+                      </ul>
+                      <div className="checkout-bg-container">
+                        <h1 className="checkout-heading">
+                          Order Total:{' '}
+                          <span className="checkout-heading-span">
+                            Rs {totalCartPrice}/-
+                          </span>
+                        </h1>
+                        <p className="checkout-description">
+                          <span className="checkout-description-span">
+                            {cartList.length}
+                          </span>{' '}
+                          items in cart
+                        </p>
+                        <button className="checkout-button" type="button">
+                          Checkout
+                        </button>
+                      </div>
+                    </div>
+                  )}
+                </>
+              )
+            }}
+          </CartContext.Consumer>
+        </div>
+      </>
+    )
+  }
+}
+
+export default CartRoute

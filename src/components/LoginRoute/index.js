@@ -53,7 +53,7 @@ class LoginRoute extends Component {
 
   renderLoaderCard = () => (
     <Loader
-      type="TailSpin"
+      type="ThreeDots"
       color="#00BBFF"
       height={60}
       width={60}
