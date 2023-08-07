@@ -20,25 +20,32 @@ class App extends Component {
   addItemToCart = productDetails => {
     const {cartList} = this.state
     if (cartList.length === 0) {
-      this.setState({cartList: [productDetails]})
-    } else {
       this.setState(prevState => ({
-        cartList: prevState.cartList.map(eachitem => {
-          let mapItem
-          if (eachitem.id !== productDetails.id) {
-            mapItem = eachitem
-          } else {
-            const updatedCartItemObject = {
-              ...eachitem,
-              quantity: eachitem.quantity + productDetails.quantity,
-              totalItemPrice:
-                eachitem.totalItemPrice + productDetails.totalItemPrice,
-            }
-            mapItem = updatedCartItemObject
-          }
-          return mapItem
-        }),
+        cartList: [...prevState.cartList, productDetails],
       }))
+    } else {
+      const cartItem = cartList.filter(
+        eachitem => eachitem.id === productDetails.id,
+      )
+      console.log(cartItem)
+      if (cartItem.length !== 0) {
+        const updatedObj = {
+          ...cartItem[0],
+          quantity: productDetails.quantity + cartItem[0].quantity,
+          totalItemPrice:
+            productDetails.totalItemPrice + cartItem[0].totalItemPrice,
+        }
+        const updatedList = cartList.map(eachitem => {
+          if (eachitem.id === productDetails.id) {
+            return updatedObj
+          }
+          return eachitem
+        })
+        this.setState({cartList: updatedList})
+      } else {
+        const updatedList = [...cartList, productDetails]
+        this.setState({cartList: updatedList})
+      }
     }
   }
 

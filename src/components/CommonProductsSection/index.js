@@ -183,7 +183,7 @@ class CommonProductsSection extends Component {
         alt="all-products-error"
         className="products-route-failure-view-image"
       />
-      <h1 className="product-route-failure-view-heading">
+      <h1 className="products-route-failure-view-heading">
         Oops! Something Went Wrong
       </h1>
       <p className="products-route-failure-view-description">

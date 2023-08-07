@@ -38,7 +38,7 @@ const Navbar = props => {
                   type="button"
                   onClick={onClickLogout}
                 >
-                  <FiLogOut className="mobile-icon" />
+                  <FiLogOut className="mobile-icon mobile-logout-icon" />
                 </button>
               </div>
               <div className="mobile-navbar-menu-card">

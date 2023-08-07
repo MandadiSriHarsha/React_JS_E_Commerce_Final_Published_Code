@@ -32,8 +32,8 @@
 .home-page-heading {
   text-align: center;
   color: #000000;
-  font-size: 20px;
-  padding: 30px 8px 20px 8px;
+  font-size: 25px;
+  padding: 50px 8px 20px 8px;
   margin: 0px 0px 0px 0px;
 }
 
@@ -69,7 +69,7 @@
 .home-page-content-card-heading {
   text-align: center;
   color: #000000;
-  font-size: 20px;
+  font-size: 28px;
   display: none;
   margin: 0px 0px 0px 0px;
   padding: 0px 0px 25px 0px;
@@ -78,14 +78,14 @@
 
 @media screen and (min-width: 768px) {
   .home-page-content-card-heading {
-    font-size: 23px;
+    font-size: 28px;
   }
 }
 
 @media screen and (min-width: 992px) {
   .home-page-content-card-heading {
     display: block;
-    font-size: 25px;
+    font-size: 28px;
   }
   .home-page-heading {
     display: none;
@@ -123,13 +123,13 @@
 }
 
 .home-page-content-card-button {
-  background-color: blue;
+  background-color: #0b69ff;
   color: #ffffff;
   padding: 10px 15px 10px 15px;
   border: none;
   cursor: pointer;
   outline: none;
-  font-weight: 600;
+  font-weight: 500;
   border-radius: 10px;
   margin: 0px 0px 30px 0px;
   font-size: 16px;

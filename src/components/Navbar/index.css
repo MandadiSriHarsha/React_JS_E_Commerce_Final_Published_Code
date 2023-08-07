@@ -35,6 +35,10 @@
   width: 22px;
 }
 
+.mobile-logout-icon {
+  color: #ff4444 !important;
+}
+
 .mobile-nav-link {
   text-decoration: none !important;
   cursor: pointer;
@@ -86,7 +90,7 @@
 }
 
 .mobile-style-icon {
-  color: blue !important;
+  color: #0b69ff !important;
   height: 22px;
   width: 22px;
 }
@@ -113,7 +117,7 @@
 }
 
 .desktop-logout-button {
-  background-color: blue;
+  background-color: #ff4444;
   color: #ffffff;
   font-size: 16px;
   cursor: pointer;
@@ -126,7 +130,7 @@
 }
 
 .desktop-style-nav-link {
-  color: blue;
+  color: #0b69ff;
   text-decoration: none !important;
   font-size: 18px;
   cursor: pointer;

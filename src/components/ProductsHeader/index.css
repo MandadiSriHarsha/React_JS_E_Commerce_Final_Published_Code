@@ -1,11 +1,11 @@
 .products-header-bg-container {
-  width: 90%;
+  width: 97%;
   margin: auto;
   display: flex;
   flex-direction: column;
   align-items: flex-start;
-  padding: 0px 0px 20px 12px;
-  margin: 0px 0px 10px 0px;
+  padding: 0px 0px 30px 12px;
+  margin: 0px 0px 0px 0px;
 }
 
 @media screen and (min-width: 576px) {
@@ -29,6 +29,7 @@
 @media screen and (min-width: 768px) {
   .products-header-heading {
     font-size: 20px;
+    padding: 0px 0px 0px 10px;
   }
 }
 
@@ -49,15 +50,15 @@
 
 .sort-by-icon-heading {
   color: #000000;
-  font-size: 14px;
-  font-weight: normal;
+  font-size: 16px;
+  font-weight: 500;
   padding: 0px 0px 0px 0px;
   margin: 0px 0px 0px 0px;
 }
 
 @media screen and (min-width: 768px) {
   .sort-by-icon-heading {
-    font-size: 16px;
+    font-size: 18px;
   }
 }
 
@@ -67,8 +68,15 @@
   margin: 0px 10px 0px 0px;
 }
 
+@media screen and (min-width: 768px) {
+  .sort-by-icon {
+    height: 25px;
+    width: 25px;
+  }
+}
+
 .sort-by-selector {
-  border: 2px solid blue;
+  border: 2px solid #0b69ff;
   padding: 7px 10px 7px 10px;
   font-family: 'Roboto';
   font-size: 16px;

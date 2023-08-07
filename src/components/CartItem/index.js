@@ -1,8 +1,6 @@
 import {AiOutlineMinusSquare, AiOutlinePlusSquare} from 'react-icons/ai'
 import {TiDelete} from 'react-icons/ti'
 
-import CartContext from '../../context/CartContext'
-
 import './index.css'
 
 const CartItem = props => {

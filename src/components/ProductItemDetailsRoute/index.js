@@ -92,7 +92,7 @@ const ProductItemDetailsRoute = props => {
     getProductItemDetails()
   }, [path])
 
-  const renderEmptyView = () => <></>
+  const renderEmptyView = () => <>{null}</>
 
   const renderLoadingView = () => (
     <div className="loader-bg-container">

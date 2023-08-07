@@ -5,6 +5,8 @@
 .prime-deals-loader-bg-container {
   height: 300px;
   width: 100%;
+  max-width: 1000px;
+  margin: auto;
   display: flex;
   flex-direction: row;
   justify-content: center;
@@ -34,20 +36,21 @@
 .prime-deals-success-heading {
   color: #000000;
   font-size: 25px;
-  font-weight: bold;
-  padding: 0px 0px 20px 12px;
+  font-weight: 600;
+  padding: 0px 0px 20px 20px;
   margin: 0px 0px 0px 0px;
 }
 
 @media screen and (min-width: 768px) {
   .prime-deals-success-heading {
-    font-size: 35px;
+    font-size: 30px;
   }
 }
 
 .prime-deals-failure-image {
   width: 90%;
-  max-width: 1050px;
+  max-width: 1100px;
   margin: 30px 20px 50px 20px;
   border-radius: 7px;
+  align-self: center;
 }

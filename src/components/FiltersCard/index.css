@@ -50,7 +50,7 @@
 }
 
 .category-list-heading {
-  font-size: 20px;
+  font-size: 18px;
   color: #000000;
   font-weight: bold;
   padding: 0px 0px 0px 0px;
@@ -59,7 +59,7 @@
 
 @media screen and (min-width: 768px) {
   .category-list-heading {
-    font-size: 23px;
+    font-size: 22px;
   }
 }
 
@@ -71,18 +71,19 @@
   padding: 0px 0px 0px 0px;
   margin: 0px 0px 20px 0px;
   text-align: left;
-  font-size: 16px;
+  font-size: 15px;
   font-weight: 500;
+  color: gray;
 }
 
 @media screen and (min-width: 768px) {
   .category-button {
-    font-size: 18px;
+    font-size: 17px;
   }
 }
 
 .apply-category-style {
-  color: blue;
+  color: #0b69ff;
   font-weight: bold;
 }
 
@@ -96,7 +97,7 @@
 }
 
 .rating-list-heading {
-  font-size: 20px;
+  font-size: 18px;
   color: #000000;
   font-weight: bold;
   padding: 0px 0px 0px 0px;
@@ -105,7 +106,7 @@
 
 @media screen and (min-width: 768px) {
   .rating-list-heading {
-    font-size: 23px;
+    font-size: 22px;
   }
 }
 
@@ -125,12 +126,12 @@
 }
 
 .clear-filters-button {
-  border: 2px solid blue;
+  border: 2px solid #0b69ff;
   color: blue;
   background: transparent;
   cursor: pointer;
   outline: none;
-  font-weight: 600;
+  font-weight: 500;
   font-size: 18px;
   padding: 8px 15px 8px 15px;
   margin: 0px 0px 15px 0px;
@@ -138,6 +139,6 @@
 }
 
 .apply-rating-style {
-  border-bottom: 1px solid blue;
+  border-bottom: 1px solid #0b69ff;
   padding: 0px 0px 0px 0px;
 }
