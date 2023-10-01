@@ -13,6 +13,7 @@ class LoginRoute extends Component {
     username: '',
     password: '',
     isErrorGenerated: false,
+    showPassword: false,
     errorMessage: '',
   }
 
@@ -28,6 +29,10 @@ class LoginRoute extends Component {
 
   onChangePassword = event => {
     this.setState({password: event.target.value})
+  }
+
+  onToggleShowOrHidePassword = () => {
+    this.setState(prevState => ({showPassword: !prevState.showPassword}))
   }
 
   onSubmitLoginForm = async event => {
@@ -62,7 +67,13 @@ class LoginRoute extends Component {
   )
 
   renderLoginCard = () => {
-    const {username, password, isErrorGenerated, errorMessage} = this.state
+    const {
+      username,
+      password,
+      showPassword,
+      isErrorGenerated,
+      errorMessage,
+    } = this.state
     return (
       <>
         <img
@@ -99,13 +110,24 @@ class LoginRoute extends Component {
               PASSWORD
             </label>
             <input
-              type="password"
+              type={showPassword ? 'text' : 'password'}
               className="input"
               value={password}
               placeholder="Password"
               id="password"
               onChange={this.onChangePassword}
             />
+          </div>
+          <div className="show-password-input-container">
+            <input
+              type="checkbox"
+              id="showPasswordInput"
+              className="show-password-checkbox"
+              onChange={this.onToggleShowOrHidePassword}
+            />
+            <label htmlFor="showPasswordInput" className="show-password-text">
+              Show Password
+            </label>
           </div>
           <button type="submit" className="form-button">
             Login

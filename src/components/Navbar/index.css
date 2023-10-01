@@ -61,7 +61,7 @@
 .desktop-navbar {
   width: 100%;
   padding: 25px 25px 25px 30px;
-  border-bottom: 2px solid #e6f6ff;
+  border-bottom: 3px solid #e6f6ff;
   display: none;
   font-family: 'Roboto';
 }
@@ -131,6 +131,7 @@
 
 .desktop-style-nav-link {
   color: #0b69ff;
+  border-bottom: 3px solid #0b69ff;
   text-decoration: none !important;
   font-size: 18px;
   cursor: pointer;
