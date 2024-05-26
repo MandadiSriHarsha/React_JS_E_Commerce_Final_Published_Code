@@ -20,6 +20,7 @@
   flex-direction: row;
   align-items: center;
   margin: 0px 0px 35px 0px;
+  border: 1px solid lightgray;
 }
 
 .filter-search-bar {
@@ -72,7 +73,7 @@
   margin: 0px 0px 20px 0px;
   text-align: left;
   font-size: 15px;
-  font-weight: 500;
+  font-weight: 400;
   color: gray;
 }
 
@@ -138,7 +139,11 @@
   border-radius: 7px;
 }
 
+.clear-filters-button:hover {
+  background-color: #caf0f8;
+}
+
 .apply-rating-style {
-  border-bottom: 1px solid #0b69ff;
+  border-bottom: 3px solid #0b69ff;
   padding: 0px 0px 0px 0px;
 }

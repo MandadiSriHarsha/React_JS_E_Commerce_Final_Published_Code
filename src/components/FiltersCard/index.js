@@ -93,6 +93,7 @@ const FiltersCard = props => {
             outline: 'none',
             width: '20%',
           }}
+          aria-label="Search"
           onClick={fetchProductsList}
         >
           <BsSearch className="search-icon" />

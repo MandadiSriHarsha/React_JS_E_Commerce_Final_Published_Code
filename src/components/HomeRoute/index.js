@@ -32,7 +32,7 @@ class HomeRoute extends Component {
           </div>
         ) : (
           <div className="home-page-bg-container">
-            <h1 className="home-page-heading">Clothes That get YOU Noticed</h1>
+            <h1 className="home-page-heading">Clothes That Get YOU Noticed</h1>
             <img
               src="https://assets.ccbp.in/frontend/react-js/nxt-trendz-home-img.png"
               alt="clothes"

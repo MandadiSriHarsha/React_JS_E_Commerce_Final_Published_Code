@@ -27,7 +27,6 @@ class App extends Component {
       const cartItem = cartList.filter(
         eachitem => eachitem.id === productDetails.id,
       )
-      console.log(cartItem)
       if (cartItem.length !== 0) {
         const updatedObj = {
           ...cartItem[0],

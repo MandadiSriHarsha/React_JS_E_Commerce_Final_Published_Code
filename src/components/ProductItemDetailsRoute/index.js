@@ -171,6 +171,7 @@ const ProductItemDetailsRoute = props => {
                       className="quantity-button"
                       type="button"
                       onClick={decreaseProductQuantity}
+                      aria-label="Quantity Decrease"
                     >
                       <AiOutlineMinusSquare className="quantity-icon" />
                     </button>
@@ -179,6 +180,7 @@ const ProductItemDetailsRoute = props => {
                       className="quantity-button"
                       type="button"
                       onClick={increaseProductQuantity}
+                      aria-label="Quantity Increase"
                     >
                       <AiOutlinePlusSquare className="quantity-icon" />
                     </button>

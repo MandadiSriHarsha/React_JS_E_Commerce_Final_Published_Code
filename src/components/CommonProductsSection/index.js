@@ -82,7 +82,6 @@ class CommonProductsSection extends Component {
   }
 
   fetchProductsList = async () => {
-    this.setState({pageStatus: 'LOADING'})
     const {defaultSortById, category, rating, searchText} = this.state
     const jwtToken = Cookies.get('jwt_token')
     const url = `https://apis.ccbp.in/products?title_search=${searchText}&rating=${rating}&category=${category}&sort_by=${defaultSortById}`
@@ -110,7 +109,10 @@ class CommonProductsSection extends Component {
   }
 
   onChangeSortBy = id => {
-    this.setState({defaultSortById: id}, this.fetchProductsList)
+    this.setState(
+      {defaultSortById: id, pageStatus: 'LOADING'},
+      this.fetchProductsList,
+    )
   }
 
   onChangeSearchText = event => {
@@ -118,11 +120,11 @@ class CommonProductsSection extends Component {
   }
 
   onChangeCategoryText = id => {
-    this.setState({category: id}, this.fetchProductsList)
+    this.setState({category: id, pageStatus: 'LOADING'}, this.fetchProductsList)
   }
 
   onChangeRatingText = id => {
-    this.setState({rating: id}, this.fetchProductsList)
+    this.setState({rating: id, pageStatus: 'LOADING'}, this.fetchProductsList)
   }
 
   onClearFilters = () => {
@@ -132,6 +134,22 @@ class CommonProductsSection extends Component {
         category: '',
         rating: '',
         defaultSortById: sortByOptions[0].id,
+        productsList: [],
+        pageStatus: 'LOADING',
+      },
+      this.fetchProductsList,
+    )
+  }
+
+  refreshProductsPage = () => {
+    this.setState(
+      {
+        pageStatus: 'LOADING',
+        productsList: [],
+        defaultSortById: sortByOptions[0].id,
+        category: '',
+        rating: '',
+        searchText: '',
       },
       this.fetchProductsList,
     )
@@ -189,6 +207,13 @@ class CommonProductsSection extends Component {
       <p className="products-route-failure-view-description">
         We are having some trouble processing your request. Please try again.
       </p>
+      <button
+        type="button"
+        className="no-products-found-button"
+        onClick={this.refreshProductsPage}
+      >
+        Retry
+      </button>
     </div>
   )
 

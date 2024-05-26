@@ -85,3 +85,7 @@
   cursor: pointer;
   outline: none;
 }
+
+.sort-by-selector:hover {
+  background-color: #caf0f8;
+}

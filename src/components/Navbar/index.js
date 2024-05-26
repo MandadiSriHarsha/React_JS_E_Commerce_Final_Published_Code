@@ -22,6 +22,9 @@ const Navbar = props => {
     <CartContext.Consumer>
       {values => {
         const {cartList} = values
+        const {match} = props
+        const {params} = match
+        const {id} = params
         return (
           <>
             <nav className="mobile-navbar">
@@ -37,6 +40,7 @@ const Navbar = props => {
                   className="logout-button"
                   type="button"
                   onClick={onClickLogout}
+                  aria-label="Logout"
                 >
                   <FiLogOut className="mobile-icon mobile-logout-icon" />
                 </button>
@@ -54,7 +58,8 @@ const Navbar = props => {
                 <Link className="mobile-nav-link" to="/products">
                   <FaShoppingBag
                     className={`${
-                      location.pathname === '/products'
+                      location.pathname === '/products' ||
+                      location.pathname === `/products/${id}`
                         ? 'mobile-style-icon'
                         : 'mobile-icon'
                     }`}
@@ -96,7 +101,8 @@ const Navbar = props => {
                 <Link
                   to="/products"
                   className={`${
-                    location.pathname === '/products'
+                    location.pathname === '/products' ||
+                    location.pathname === `/products/${id}`
                       ? 'desktop-style-nav-link'
                       : 'desktop-nav-link'
                   }`}
@@ -122,6 +128,7 @@ const Navbar = props => {
                   type="button"
                   className="desktop-logout-button"
                   onClick={onClickLogout}
+                  aria-label="Logout"
                 >
                   Logout
                 </button>

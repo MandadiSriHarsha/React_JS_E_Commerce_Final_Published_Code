@@ -97,13 +97,14 @@
   font-weight: 400;
   text-align: center;
   margin: 0px 0px 0px 0px;
-  padding: 0px 0px 25px 0px;
+  padding: 10px 0px 25px 0px;
   font-size: 16px;
 }
 
 @media screen and (min-width: 768px) {
   .home-page-content-card-description {
     font-size: 18px;
+    padding: 0px 0px 25px 0px;
   }
 }
 
@@ -125,7 +126,7 @@
 .home-page-content-card-button {
   background-color: #0b69ff;
   color: #ffffff;
-  padding: 10px 15px 10px 15px;
+  padding: 12px 20px 12px 20px;
   border: none;
   cursor: pointer;
   outline: none;
@@ -138,5 +139,6 @@
 @media screen and (min-width: 992px) {
   .home-page-content-card-button {
     font-size: 18px;
+    padding: 13px 25px 13px 25px;
   }
 }
