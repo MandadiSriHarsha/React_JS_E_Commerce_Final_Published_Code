@@ -148,7 +148,7 @@
 .product-item-details-rating {
   border: none;
   color: #ffffff;
-  background-color: blue;
+  background-color: #0b69ff;
   padding: 8px 12px 8px 12px;
   display: flex;
   flex-direction: row;
@@ -242,8 +242,8 @@
 }
 
 .product-item-details-line-break {
-  background-color: orange;
-  border: 1px solid orange;
+  background-color: #00bfff;
+  border: 1px solid #00bfff;
   width: 100%;
   margin: 0px 0px 20px 0px;
 }
