@@ -127,7 +127,7 @@
 }
 
 .desktop-logout-button {
-  background-color: #dc143c;
+  background-color: #ff4444;
   color: #ffffff;
   font-size: 16px;
   cursor: pointer;
@@ -140,7 +140,7 @@
 }
 
 .desktop-logout-button:hover {
-  background-color: #ff4444;
+  background-color: #dc143c;
 }
 
 .desktop-style-nav-link {
@@ -157,12 +157,12 @@
 .mobile-cart-count {
   margin: 0px 10px 0px 10px;
   background-color: #ffffff;
-  border: 1px solid #0b69ff;
+  border: 2px solid #0b69ff;
   color: #0b69ff;
   padding: 8px 12px 8px 12px;
   border-radius: 10px;
   font-size: 14px;
-  font-weight: 500;
+  font-weight: 600;
   height: 70%;
 }
 
@@ -174,13 +174,13 @@
 
 .desktop-cart-count {
   background-color: #e6f6ff;
-  border: 1px solid #0b69ff;
+  border: 2px solid #0b69ff;
   color: #0b69ff;
   margin: 0px 10px 0px 10px;
   padding: 8px 12px 8px 12px;
   font-size: 12px;
   border-radius: 10px;
-  font-weight: 500;
+  font-weight: 600;
 }
 
 @media screen and (min-width: 768px) {

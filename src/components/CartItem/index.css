@@ -1,9 +1,9 @@
-.cart-item {
+.sub-container {
   width: 100%;
   display: flex;
-  flex-direction: row;
-  justify-content: space-between;
+  flex-direction: column;
   align-items: center;
+  list-style-type: none;
   padding: 20px 15px 20px 15px;
   margin: 0px 0px 30px 0px;
   box-shadow: 0px 8px 40px rgba(7, 7, 7, 0.08);
@@ -11,9 +11,57 @@
   border: 1px solid lightgray;
 }
 
+.small-device-info {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  padding: 0px 0px 0px 0px;
+  margin: 12px 0px 0px 10px;
+  width: 100%;
+}
+
+.small-device-info-heading {
+  color: #000000;
+  font-size: 16px;
+  padding: 0px 0px 0px 0px;
+  margin: 0px 0px 8px 0px;
+  font-weight: 500;
+}
+
+.small-device-info-price {
+  color: #0b69ff;
+  padding: 0px 0px 0px 0px;
+  margin: 0px 0px 0px 5px;
+  font-size: 16px;
+  font-weight: bold;
+}
+
+@media screen and (min-width: 350px) {
+  .small-device-info {
+    display: none;
+  }
+}
+
+@media screen and (max-width: 350px) {
+  .cart-item-header-card-heading {
+    display: none;
+  }
+  .cart-item-item-total-price {
+    display: none;
+  }
+}
+
+.cart-item {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+
 .cart-item-image {
-  width: 20%;
-  max-width: 130px;
+  width: 25%;
+  max-width: 160px;
   border-radius: 8px;
   margin: 0px 0px 0px 10px;
 }
@@ -48,11 +96,13 @@
 }
 
 .cart-item-header-card-heading {
+  width: 100%;
   color: #000000;
   font-size: 16px;
   padding: 0px 0px 0px 0px;
   margin: 0px 0px 8px 0px;
   font-weight: 500;
+  text-align: center;
 }
 
 @media screen and (min-width: 768px) {
@@ -152,6 +202,7 @@
   margin: 0px 0px 0px 0px;
   font-size: 18px;
   font-weight: bold;
+  text-align: center;
 }
 
 @media screen and (min-width: 768px) {
@@ -170,14 +221,14 @@
 }
 
 .remove-icon {
-  height: 22px;
-  width: 22px;
+  height: 25px;
+  width: 25px;
   color: #ff4444;
 }
 
 @media screen and (min-width: 768px) {
   .remove-icon {
-    height: 25px;
-    width: 25px;
+    height: 28px;
+    width: 28px;
   }
 }

@@ -2,7 +2,7 @@
   width: 100%;
   max-width: 330px;
   margin: 0px 0px 0px 0px;
-  padding: 0px 15px 30px 15px;
+  padding: 0px 15px 30px 5px;
   display: flex;
   flex-direction: column;
   align-items: flex-start;
@@ -39,6 +39,8 @@
   width: 20px;
   height: 20px;
   align-self: center;
+  margin: 3px 0px 0px 0px;
+  padding: 0px 0px 0px 0px;
 }
 
 .category-list-bg-container {
@@ -131,7 +133,7 @@
 }
 
 .rating-image:hover {
-  border-left: 2px solid #0b69ff;
+  border-left: 3px solid #0b69ff;
 }
 
 .clear-filters-button {

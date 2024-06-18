@@ -68,7 +68,7 @@ class CartRoute extends Component {
                     type="button"
                     onClick={clearCart}
                   >
-                    Remove All
+                    Clear Cart
                   </button>
                   <ul className="cart-list-bg-container">
                     {cartList.map(eachitem => (

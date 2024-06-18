@@ -1,7 +1,7 @@
 .cart-route-bg-container {
   min-height: 85vh;
   width: 97%;
-  max-width: 1100px;
+  max-width: 1000px;
   margin: auto;
   padding: 30px 10px 30px 10px;
 }
@@ -166,6 +166,7 @@
 .checkout-description-span {
   color: #0b69ff;
   font-size: 15px;
+  font-weight: 600;
 }
 
 @media screen and (min-width: 768px) {

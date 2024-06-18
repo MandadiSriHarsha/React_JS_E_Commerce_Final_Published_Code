@@ -25,39 +25,47 @@ const CartItem = props => {
   }
 
   return (
-    <li className="cart-item">
-      <img src={imageUrl} alt={title} className="cart-item-image" />
-      <div className="cart-item-content-card">
-        <div className="cart-item-header-card">
-          <p className="cart-item-header-card-heading">{title}</p>
-          <p className="cart-item-header-card-description">{brand}</p>
+    <li className="sub-container">
+      <div className="cart-item">
+        <img src={imageUrl} alt={title} className="cart-item-image" />
+        <div className="cart-item-content-card">
+          <div className="cart-item-header-card">
+            <p className="cart-item-header-card-heading">{title}</p>
+          </div>
+          <div className="cart-item-quantity-card">
+            <button
+              className="cart-item-decrease-button"
+              type="button"
+              onClick={decreaseCartItem}
+              aria-label="DecreaseCartItem"
+            >
+              <AiOutlineMinusSquare className="cart-item-decrease-icon" />
+            </button>
+            <p className="cart-item-quantity">{quantity}</p>
+            <button
+              className="cart-item-increase-button"
+              type="button"
+              onClick={increaseCartItem}
+              aria-label="INcreaseCartItem"
+            >
+              <AiOutlinePlusSquare className="cart-item-increase-icon" />
+            </button>
+          </div>
+          <p className="cart-item-item-total-price">Rs {totalItemPrice}/-</p>
         </div>
-        <div className="cart-item-quantity-card">
-          <button
-            className="cart-item-decrease-button"
-            type="button"
-            onClick={decreaseCartItem}
-          >
-            <AiOutlineMinusSquare className="cart-item-decrease-icon" />
-          </button>
-          <p className="cart-item-quantity">{quantity}</p>
-          <button
-            className="cart-item-increase-button"
-            type="button"
-            onClick={increaseCartItem}
-          >
-            <AiOutlinePlusSquare className="cart-item-increase-icon" />
-          </button>
-        </div>
-        <p className="cart-item-item-total-price">Rs {totalItemPrice}/-</p>
+        <button
+          className="cart-item-delete-item-button"
+          type="button"
+          onClick={removeCartItem}
+          aria-label="RemoveCartItem"
+        >
+          <TiDelete className="remove-icon" />
+        </button>
       </div>
-      <button
-        className="cart-item-delete-item-button"
-        type="button"
-        onClick={removeCartItem}
-      >
-        <TiDelete className="remove-icon" />
-      </button>
+      <div className="small-device-info">
+        <p className="small-device-info-heading">{title} - </p>
+        <p className="small-device-info-price">Rs {totalItemPrice}/-</p>
+      </div>
     </li>
   )
 }
