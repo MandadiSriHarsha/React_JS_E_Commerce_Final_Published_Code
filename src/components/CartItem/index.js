@@ -10,7 +10,7 @@ const CartItem = props => {
     increaseCartItemQuantity,
     decreaseCartItemQuantity,
   } = props
-  const {id, imageUrl, brand, price, totalItemPrice, title, quantity} = data
+  const {id, imageUrl, price, totalItemPrice, title, quantity} = data
 
   const removeCartItem = () => {
     removeItemFromCart(id)

@@ -13,7 +13,7 @@ const Navbar = props => {
   const onClickLogout = () => {
     const {history} = props
     Cookies.remove('jwt_token')
-    history.replace('/')
+    history.push('/')
   }
 
   const location = useLocation()

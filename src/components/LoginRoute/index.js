@@ -50,7 +50,7 @@ class LoginRoute extends Component {
       const jwtToken = data.jwt_token
       const {history} = this.props
       Cookies.set('jwt_token', jwtToken, {expires: 30})
-      history.replace('/home')
+      history.push('/home')
     } else {
       this.setState({isErrorGenerated: true, errorMessage: data.error_msg})
     }

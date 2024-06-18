@@ -18,7 +18,7 @@ class HomeRoute extends Component {
 
   onNavigateToProductsRoute = () => {
     const {history} = this.props
-    history.replace('/products')
+    history.push('/products')
   }
 
   render() {

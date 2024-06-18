@@ -99,28 +99,30 @@ const FiltersCard = props => {
           <BsSearch className="search-icon" />
         </button>
       </div>
-      <ul className="category-list-bg-container">
-        <h1 className="category-list-heading">Category</h1>
-        {categoryOptions.map(eachitem => (
-          <CategoryItem
-            key={eachitem.categoryId}
-            data={eachitem}
-            onChangeCategoryValue={onChangeCategoryValue}
-            category={category}
-          />
-        ))}
-      </ul>
-      <ul className="ratings-list-bg-container">
-        <h1 className="rating-list-heading">Rating</h1>
-        {ratingsList.map(eachitem => (
-          <RatingItem
-            key={eachitem.ratingId}
-            data={eachitem}
-            onChangeRatingValue={onChangeRatingValue}
-            rating={rating}
-          />
-        ))}
-      </ul>
+      <div className="wrapper">
+        <ul className="category-list-bg-container">
+          <h1 className="category-list-heading">Category</h1>
+          {categoryOptions.map(eachitem => (
+            <CategoryItem
+              key={eachitem.categoryId}
+              data={eachitem}
+              onChangeCategoryValue={onChangeCategoryValue}
+              category={category}
+            />
+          ))}
+        </ul>
+        <ul className="ratings-list-bg-container">
+          <h1 className="rating-list-heading">Rating</h1>
+          {ratingsList.map(eachitem => (
+            <RatingItem
+              key={eachitem.ratingId}
+              data={eachitem}
+              onChangeRatingValue={onChangeRatingValue}
+              rating={rating}
+            />
+          ))}
+        </ul>
+      </div>
       <button
         type="button"
         className="clear-filters-button"

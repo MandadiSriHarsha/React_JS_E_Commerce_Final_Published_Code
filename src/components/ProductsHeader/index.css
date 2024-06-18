@@ -79,11 +79,17 @@
   border: 2px solid #0b69ff;
   padding: 7px 10px 7px 10px;
   font-family: 'Roboto';
-  font-size: 16px;
+  font-size: 14px;
   margin: 0px 10px 0px 10px;
   border-radius: 7px;
   cursor: pointer;
   outline: none;
+}
+
+@media screen and (min-width: 768px) {
+  .sort-by-selector {
+    font-size: 16px;
+  }
 }
 
 .sort-by-selector:hover {
